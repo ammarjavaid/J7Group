@@ -1,0 +1,202 @@
+@import "../../general_style/varriable";
+
+.footer {
+  background-color: rgb(75, 74, 74);
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+
+    @media screen and (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 540px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 25px 0;
+    }
+
+    .first-row {
+      width: 30%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      .img {
+        width: 250px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 540px) {
+          width: 180px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 12px;
+        color: $thirdColor;
+        margin-bottom: 0;
+        padding-right: 30px;
+        text-align: justify;
+      }
+
+      .first-row-details {
+        padding-top: 20px;
+        .address {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding-bottom: 10px;
+          .icon {
+            color: $thirdColor;
+          }
+          .address-text {
+            text-align: left;
+          }
+        }
+        .phone {
+          display: flex;
+          align-items: center;
+          padding-bottom: 10px;
+          gap: 10px;
+          .icon {
+            color: $thirdColor;
+          }
+        }
+        .mail {
+          display: flex;
+          align-items: center;
+          padding-bottom: 10px;
+          gap: 10px;
+          .icon {
+            color: $thirdColor;
+          }
+        }
+        .time {
+          display: flex;
+          align-items: center;
+          padding-bottom: 10px;
+          gap: 10px;
+          .icon {
+            color: $thirdColor;
+          }
+        }
+      }
+    }
+    .second-row {
+      width: 20%;
+      padding-left: 3rem;
+      margin-top: 10px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 540px) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 30px;
+      }
+      h3 {
+        color: $thirdColor;
+        font-size: 18px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 27px;
+        li {
+          color: $thirdColor;
+          font-size: 12px;
+          padding: 4px 0;
+        }
+      }
+    }
+    .third-row {
+      width: 20%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      ul {
+        list-style-type: none;
+        padding-top: 28px;
+        margin-top: 27px;
+        @media screen and (max-width: 768px) {
+          padding-left: 0;
+        }
+        @media screen and (max-width: 540px) {
+          padding-left: 0;
+          padding-top: 0;
+        }
+        li {
+          color: $thirdColor;
+          font-size: 12px;
+          padding: 4px 0;
+        }
+      }
+    }
+    .fouurth-row {
+      width: 30%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-left: 50px;
+        padding-top: 30px;
+      }
+      @media screen and (max-width: 540px) {
+        width: 100%;
+        padding-left: 0px;
+        padding-top: 30px;
+      }
+      h3 {
+        color: $thirdColor;
+        font-size: 18px;
+      }
+      p {
+        color: $thirdColor;
+        font-size: 12px;
+        margin: 0;
+      }
+      .icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        color: $thirdColor;
+        padding: 10px 0;
+        a {
+          &:nth-child(3) {
+            font-size: 14px;
+          }
+        }
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        width: 90%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+        input {
+          border: none;
+          padding: 10px 12px;
+          font-size: 13px;
+          &::placeholder {
+            font-size: 13px;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          background-color: $primaryColor;
+          border: none;
+          padding: 10px 0;
+          color: $thirdColor;
+          font-size: 13px;
+          margin-top: 12px;
+        }
+      }
+      a {
+        color: $thirdColor;
+      }
+    }
+  }
+}

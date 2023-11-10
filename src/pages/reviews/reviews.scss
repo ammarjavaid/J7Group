@@ -1,0 +1,113 @@
+@import "../../general_style/varriable";
+
+.review {
+  width: 100%;
+  margin-bottom: 3rem !important;
+  margin: auto;
+
+  .hr-lines {
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 30px !important;
+    margin: auto;
+    text-align: center;
+    font-size: 26px;
+    color: $secundaryColor;
+    @media screen and (max-width: 540px) {
+      font-size: 21px;
+    }
+  }
+
+  .hr-lines:before {
+    content: " ";
+    height: 2px;
+    width: 130px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .hr-lines:after {
+    content: " ";
+    height: 2px;
+    width: 130px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .box-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    // row-gap: 50px !important;
+    // column-gap: 50px !important;
+    .carousel {
+      display: flex !important;
+      margin: auto;
+      .box {
+        border: 1px solid #f4f4f4;
+        padding: 30px 30px 50px 30px;
+        position: relative;
+        margin: auto !important;
+        height: 170px;
+        gap: 30px;
+        // box-shadow: -4px 3px 32px -2px #eee;
+        .desc {
+          font-size: 12px;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+        .profile-detail {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          width: 90%;
+          margin-top: 10px;
+          z-index: 100 !important;
+          .img {
+            width: 70px;
+            height: 70px;
+            img {
+              width: 100%;
+            }
+          }
+          .name-title {
+            box-shadow: -4px 3px 32px -2px #eee;
+            border: 1px solid #f4f4f4;
+            background-color: white;
+            padding: 6px 12px;
+            .name {
+              margin-bottom: 0;
+              font-size: 12px;
+              font-weight: 600;
+              color: $primaryColor;
+            }
+            .title {
+              font-size: 12px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .slick-track {
+      display: flex;
+      gap: 40px;
+      @media screen and (max-width: 768px) {
+        gap: 0;
+      }
+    }
+  }
+}

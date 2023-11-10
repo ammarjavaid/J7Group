@@ -1,0 +1,287 @@
+@import "../../general_style/varriable";
+
+.header.scrolled {
+  background-color: $thirdColor;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  transition: background-color 0.3s ease-in-out;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+  }
+
+  img {
+    width: 200px;
+    cursor: pointer;
+    @media screen and (max-width: 540px) {
+      width: 150px;
+    }
+  }
+  .ant-dropdown-trigger {
+    .link-item {
+      color: $thirdColor !important;
+    }
+    .scroll {
+      color: $secundaryColor !important;
+    }
+  }
+  .list-items {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    list-style: none;
+    gap: 40px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .item {
+      color: $secundaryColor;
+      font-weight: 400;
+      font-size: 12px;
+      color: $thirdColor;
+      padding: 5px 0;
+      cursor: pointer;
+      position: relative;
+      a {
+        .downIcon {
+          font-size: 10px;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: $primaryColor;
+        left: 0;
+        transition: 0.5s ease-in-out;
+        bottom: 0;
+      }
+      &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $primaryColor;
+          left: 0;
+          bottom: 0;
+          &:nth-child(3) {
+            width: 0% !important;
+          }
+        }
+      }
+    }
+    .scroll {
+      color: $secundaryColor;
+      font-weight: 400;
+    }
+    .request {
+      background-color: $primaryColor;
+      align-items: center;
+      display: flex;
+      height: 40px;
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-size: 12px;
+      color: $thirdColor;
+      border: none;
+      border-radius: 20px;
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: $thirdColor;
+    @media screen and (max-width: 992px) {
+      gap: 6px;
+    }
+    .fb {
+      font-size: 18px;
+      cursor: pointer;
+      color: $thirdColor;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .insta {
+      font-size: 19px;
+      cursor: pointer;
+      color: $thirdColor;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .x {
+      font-size: 16px;
+    }
+    .whatsapp {
+      cursor: pointer;
+      color: $thirdColor;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .scroll {
+    color: $primaryColor;
+    a {
+      .fb {
+        color: $primaryColor;
+      }
+      .insta {
+        color: $primaryColor;
+        &:nth-child(2) {
+          background-color: red !important;
+        }
+      }
+      .x {
+        font-size: 16px;
+      }
+    }
+    .insta {
+      color: $primaryColor;
+    }
+  }
+  .toggle-icons {
+    display: none;
+    @media screen and (max-width: 992px) {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+}
+
+// drawer
+
+.ant-drawer-body {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  img {
+    width: 200px;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    padding-left: 4px;
+    padding-top: 20px;
+    li {
+      padding: 13px 0;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .ant-menu {
+      padding-top: 0;
+      padding-left: 0;
+    }
+  }
+}
+.ant-menu-submenu-title {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.ant-menu-submenu-title {
+  background-color: none !important;
+  width: 70% !important;
+  &:hover {
+    background: transparent !important;
+  }
+}
+.ant-menu {
+  background-color: transparent !important;
+  .ant-menu-item {
+    padding: 0 !important;
+    padding-left: 10px !important;
+  }
+}
+.request {
+  background-color: $primaryColor;
+  align-items: center;
+  display: flex;
+  height: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  color: $thirdColor;
+  border: none;
+  border-radius: 20px;
+}
+.ant-menu.ant-menu-root.ant-menu-vertical {
+  border-inline-end: none !important;
+}
+
+.ant-menu-light.ant-menu-root.ant-menu-inline {
+  border-inline-end: none !important;
+}
+
+// modal
+
+.ant-modal-body {
+  .ant-form-item {
+    margin-bottom: 10px !important;
+    .ant-input {
+      height: 35px !important;
+      &:hover {
+        border-color: $secundaryColor !important;
+      }
+    }
+  }
+
+  .ant-select {
+    height: 35px !important;
+    &:hover {
+      border-color: $secundaryColor !important;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    .ant-btn {
+      background-color: $primaryColor !important;
+      color: $thirdColor !important;
+      height: 40px !important;
+      width: 30% !important;
+      font-size: 14px !important;
+    }
+  }
+}
+.ant-modal .ant-modal-title {
+  margin-bottom: 20px !important;
+  color: $secundaryColor !important;
+}
+
+.ant-modal-footer {
+  display: none !important;
+}
+
+.ant-dropdown-menu .ant-dropdown-menu-item {
+  font-size: 12px !important;
+}
